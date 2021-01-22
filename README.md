@@ -30,10 +30,12 @@ Vectors and data frames
 > rep( x, each=2)
 [1] 1 1 5 5 7 7
 
-> y <- rnorm(6) >y
+> y <- rnorm(6) 
+> y
 [1] -0.45039371 2.57843737 0.16857918 0.53228122 0.09552438 -0.27390916
 
-> xxy <- data.frame(x,x,y) > xxy
+> xxy <- data.frame(x,x,y) 
+> xxy
 x x.1
 1 1 1
 2 5 5
@@ -54,7 +56,8 @@ xy
 ```
 Vectors and matrices
 ```
-> x <- 1:10 >x
+> x <- 1:10 
+> x
  [1]  1  2  3  4  5  6  7  8  9 10
 
 > class(x)
@@ -63,7 +66,8 @@ Vectors and matrices
 > dim(x)
 NULL
 
-> dim(x) <- c(2,5) >x
+> dim(x) <- c(2,5) 
+> x
 # what just happened?
 2
 [,1] [,2] [,3] [,4] [,5]
@@ -71,10 +75,12 @@ NULL
 [2,]    2    4    6    8   10
 We just made a matrix from a vector by manipulating the attributes (here, dimension). Another way to accomplish the same thing:
 
-> x <- 1:10 > class(x)
+> x <- 1:10 
+> class(x)
 [1] "integer"
 
-> x <- matrix(x, nrow=2) > class(x)
+> x <- matrix(x, nrow=2) 
+> class(x)
 [1] "matrix"
 
 > dim(x)
