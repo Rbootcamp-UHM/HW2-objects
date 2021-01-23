@@ -3,7 +3,7 @@
 ## <span style="color:blue">due by Monday at midnight</span>
 Submit:
 1. Two scripts ending in `.R` 
-2. Your output files (`.csv` files)
+2. Your output files
 
 |Criteria| Evaluation| Scoring |
 |---------|-|-|
@@ -128,12 +128,12 @@ Now make the four qqnorm plots (one for each variable), and they will fill the p
 ```
 Make all four plots. Which variables are most normally distributed? Which are deviating the most? (We’re just going to note it, but not do anything about it).
 
-b.  Make an new plot window using quartz() for Mac or x11() for PC or Linux. Now let’s make some scatterplots. The plot method for data frames will auto- matically make a set of bivariate plots for each pair of variables (i.e., just use the plot( iris ) function on the data frame). Plot the dataframe including only the numeric columns (exclude the species name column). Do you notice anything about the scatterplots? Do they correspond in any way to the dip seen in the QQ plots of some of the variables?
+b.  Make an new plot window using quartz() for Mac or x11() for PC or Linux. Now let’s make some scatterplots. The plot method for data frames will automatically make a set of bivariate plots for each pair of variables (i.e., just use the plot( iris ) function on the data frame). Plot the dataframe including only the numeric columns (exclude the species name column). Do you notice anything about the scatterplots? Do they correspond in any way to the dip seen in the QQ plots of some of the variables?
 
-c.  Do you think there might be species di↵erences in the data? Remake the scatterplots, but this time let’s color code the species so that we can see the clouds of points for each species on each plot. We do this by creating a color vector, with one entry for each row of the iris dataframe, where setosa gets a value of "red", versicolor gets a value of "blue", and virginica gets a value of "black". First find out how the species are arranged in the levels of the factor by printing the vector of Species to screen (or check the attributes). Create a vector of colors to correspond to the species names. Set the col= argument in plot() to the color vector that you just created. Your plot should look like this:  
+c.  Do you think there might be species differences in the data? Remake the scatterplots, but this time let’s color code the species so that we can see the clouds of points for each species on each plot. We do this by creating a color vector, with one entry for each row of the iris dataframe, where setosa gets a value of "red", versicolor gets a value of "blue", and virginica gets a value of "black". First find out how the species are arranged in the levels of the factor by printing the vector of Species to screen (or check the attributes). Create a vector of colors to correspond to the species names. Set the col= argument in plot() to the color vector that you just created. Your plot should look like this:  
 
 
-What do you see? Are the species di↵erent? In what way? Which are most different?
+What do you see? Are the species different? In what way? Which are most different?
 
 d.  Remake the QQ plots and the bivariate scatter with color, but this time make pdfs. Turn in your finished script that creates these plots as pdfs and answers the questions in comments.
 
