@@ -133,10 +133,7 @@ d.  Remake the QQ plots and the bivariate scatter with color, but this time make
 CONGRATULATIONS! You just finished your second homework assignment. 
 
 
-
-
-
-
+ ## Submission
 
 1. Clone the `hw1-objects` repository there. Or just make a folder. Clone this repository or copy the files there. If you have git installed, you would do from within your `Rclass\Homework` directory (please copy the link from your personal repository so that your username is correct):
 
