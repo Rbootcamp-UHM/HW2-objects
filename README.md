@@ -12,6 +12,13 @@ Submit:
 |Code Readable| Good use of whitespace,etc | 1-5 |
 |Understandable| Concise use of helpful comments - see cars_script.R You are welcome to delete the explanation comments | 1-5 |
 
+Clone the `hw1-objects` repository there. Or just make a folder. Clone this repository or copy the files there. If you have git installed, you would do from within your `Rclass\Homework` directory (please copy the link from your personal repository so that your username is correct):
+
+If you run into trouble with git or GitHub, check out the instructions here: https://github.com/Rbootcamp-UHM/github-classroom-for-students/blob/master/README.md
+
+```
+git clone https://github.com/Rbootcamp-UHM/hw1-objects-USERNAME.git
+```
 
 ## The Idea:
 - Script 1: In the first part you will demonstrate your ability to make R bend to your will. 
@@ -135,17 +142,10 @@ CONGRATULATIONS! You just finished your second homework assignment.
 
  ## Submission
 
-1. Clone the `hw1-objects` repository there. Or just make a folder. Clone this repository or copy the files there. If you have git installed, you would do from within your `Rclass\Homework` directory (please copy the link from your personal repository so that your username is correct):
 
-If you run into trouble with git or GitHub, check out the instructions here: https://github.com/Rbootcamp-UHM/github-classroom-for-students/blob/master/README.md
+1. Test and debug your script. As a final check, after saving your script, shut down R completely and then restart and run from source. Does it run without error?
 
-```
-git clone https://github.com/Rbootcamp-UHM/hw1-objects-USERNAME.git
-```
-
-3. Test and debug your script. As a final check, after saving your script, shut down R completely and then restart and run from source. Does it run without error?
-
-4. When you're done, push it back up to GitHub. You can either commit your files or just use the web interface to submit your files back to this repository.
+2. When you're done, push it back up to GitHub. You can either commit your files or just use the web interface to submit your files back to this repository.
 
 Submit your homework but pushing your work up to your homework repository
 ```
