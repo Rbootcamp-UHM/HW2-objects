@@ -110,7 +110,10 @@ Make sure your scripts run without error when sourced before you turn it in, and
 
 **Exploring data and plotting** For this problem, use the built-in dataset iris. We will do a typical preliminary data exploration where we check each variable for normality and do bivariate plots two variables at a time. You may want to check the names of the iris dataframe to do the exercises. For this problem, what you should include in the final script is explained in 2(d).
 
-     a. Let’s start by checking normality of the data. We will use the function qqnorm(). It produces a normal QQ plot (a probability plot) and compares it to the theoretical QQ for normally-distributed data. If the data are normally distributed, this plot should show points following a straight line at a diagonal. Since there are four variables, let’s make four plots on one page. Set this up in the plot environment using the code:
+     a. Let’s start by checking normality of the data. We will use the function qqnorm(). It produces a normal QQ plot (a probability plot)  
+     and compares it to the theoretical QQ for normally-distributed data. If the data are normally distributed, this plot should show points  
+     following a straight line at a diagonal. Since there are four variables, let’s make four plots on one page. Set this up in the plot 
+     environment using the code:  
 ```
 > par(mfrow=c(2,2))
 ```
