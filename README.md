@@ -76,30 +76,35 @@ Make all four plots. Which variables are most normally distributed? Notice which
 
 5.  **Are these species really distinct? Letʻs plot a permutation**.
     Scramble(=permute) the species names keeping the data in place and replot the data using function `sample()`. The idea is if all of the flowers come from the same group or species, it shouldnʻt matter which species label they have. Normally for a permutation test you might compute the mean or some statistic of interest and compare the observed statistic vs. for the permutations, but weʻre just coding so weʻll do plots so we can see what is happening (you can certainly compare means  as well if you like! - in any case even when I do stats I often do exploratory plots.) What do you expect to see? Your points should not change position, just the colors should change after randomizing species. Your plot might look something like this:
+    
 <img width="700" src="./etc/irisrandom1.png">
-        \- Make sure it works, then plot to pdf. Are the colors correctly assigned to the permuted species?
-        \- Write permuted dataset to .csv
-        \- Permute species, plot to pdf, write to csv 10 times. Your fabulous `paint.iris()` makes this easier.
+
+  * Make sure it works, then plot to pdf. Are the colors correctly assigned to the permuted species?
+  * Write permuted dataset to .csv
+  * Permute species, plot to pdf, write to csv 10 times. Your fabulous `paint.iris()` makes this easier.
 
 6.  **Univariate Density Plots** Another way to look at data is by plotting the density of the values. For one variable, if we assume that the observations represent a random sample we can estimate a probability distribution using a kernel density assumption (if this means nothing to you, donʻt worry - itʻs statistics. I am just giving you this as something to do). For Rbootcamp, focus on what type of object you have to give to the `density()` function, and what is the class of the output? There is a built-in `plot()` function for density, but in case you want to get at any of the internal information stored in what is returned from `density()`, how would you access it?
 
     The relevant part for this class is about indexing and subsetting objects, passing objects, etc. If you want to know more about density, look at the help page `?density` check out the example "old faithful" at the bottom. You can look at the built-in data: `head(faithful)`
 
-    -   The density plot for Petal.Length all three species together looks like this:
+  * The density plot for Petal.Length all three species together looks like this:
 
 ```
     density(iris$Petal.Length)       # print method shows some basic info
     dd <- density(iris$Petal.Length) # save density output
     plot(dd)                         # plot the density of all Petal.Length points
 ```
-<img width="700" src="./etc/irisdensity.png">    
-    - Very interesting bumps there. But do they correspond to the different species? Your task is to plot the densities for Petal.Length by species together on one plot to see:  
+<img width="700" src="./etc/irisdensity.png">  
+
+* Very interesting bumps there. But do they correspond to the different species? Your task is to plot the densities for Petal.Length by species together on one plot to see: 
+
 <img width="700" src="./etc/irisdensitysp.png"> 
-    - What do you think?  
-    - When you code your plots, you will have some issues with the plot size and will have to set xlimits and ylimits. Follow the hints in the stub.  
-    - Once you get everything working, **Write a function** accepts as input a vector of data (i.e., `iris$Petal.Length` for example), and a vector that has information to indicate groups (i.e., `iris$Species`), and does what is necessary  to produce a pdf of the three densities on a single plot as we just did above.  
-    - Use your function to produce density plots for each of the variables in the original data.  
-    - Generate these plots for each of the 10 randomized datasets you saved earlier. One file per simulation (come up with a naming scheme `density_sim1.pdf` or whatever makes sense to you).    
+
+* What do you think?   
+* When you code your plots, you will have some issues with the plot size and will have to set xlimits and ylimits. Follow the hints in the stub.  
+* Once you get everything working, **Write a function** accepts as input a vector of data (i.e., `iris$Petal.Length` for example), and a vector that has information to indicate groups (i.e., `iris$Species`), and does what is necessary  to produce a pdf of the three densities on a single plot as we just did above.  
+* Use your function to produce density plots for each of the variables in the original data.  
+* Generate these plots for each of the 10 randomized datasets you saved earlier. One file per simulation (come up with a naming scheme `density_sim1.pdf` or whatever makes sense to you).    
 
 ### Once you have a working function, itʻs so easy isnʻt it?!
 
