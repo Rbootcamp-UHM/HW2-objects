@@ -21,7 +21,7 @@ sp <- as.character(iris$Species)
 
 # But I donʻt like those colors.
 # Create your own color pallete for the three species
-# Magenta, teal, brown, etc. try "colors()" to see all the possibilities
+# Try "colors()" to see all the possibilities
 # explain which species goes with which color in a comment
 
 icol <- as.character(sp)
@@ -59,15 +59,6 @@ dev.off ()
 
 
 
-## Are these species really distinct? Letʻs do a permutation test. 
-## Scramble(=permute) the species names keeping the data in place 
-## and replot the data using function sample().
-## Normally for a permutation test you might compute the mean 
-## or some statistic of interest, but weʻre just coding so weʻll do plots
-## (you can certainly compare means  as well if you like!) 
-## What do you expect to see? Your points should not change position, 
-## just the colors should change after randomizing species.
-
 ## Scramble species. Make sure this works
 
 sp <- sample(iris$Species)
@@ -86,17 +77,6 @@ dev.off ()
 
 
 ############# Density plots ######################################
-## Another way to look at data is by plotting a density of the values. 
-## For one variable, if we assume that the observations represent a random sample
-## we can make a probability distribution using a kernel density assumption (if this
-## means nothing to you, donʻt worry - itʻs statistics. I am just giving you this as
-## something one might want to do.). For Rbootcamp, focus on what 
-## type of objetct you have to give to the density() function, and what is the class of
-## the output? There is a built-in plot function for density, but in case you want to get
-## at any of the internal information, how would you access it?  So the relevant part
-## for this class is about indexing and subsetting objects, passing objects, etc. 
-###############################################################
-
 ## If you want to know more about density, look at the help page ?density
 ## check out the example "old faithful" at the bottom. You can look at the data: head(faithful)
 
