@@ -1,6 +1,6 @@
 # hw2-objects
 
-## <span style="color:blue">due by Wendesay at midnight</span>
+## <span style="color:blue">due by Wednesay at midnight</span>
 
 Submit:  
 1\. Your script ending in `.R`  
@@ -17,7 +17,7 @@ Clone the `hw2-objects` repository into your `Rclass\Homework` directory (please
 
 If you run into trouble with git or GitHub, check out the instructions here: <https://github.com/Rbootcamp-UHM/github-classroom-for-students/blob/master/README.md>
 
-    git clone https://github.com/Rbootcamp-UHM/hw1-objects-USERNAME.git
+    git clone https://github.com/Rbootcamp-UHM/....git  
 
 ## The Idea:
 
@@ -54,11 +54,9 @@ Make all four plots. Which variables are most normally distributed? Notice which
 
 2.  **Explore scatterplots**. Make an new plot window using `quartz()` for Mac or `x11()` for PC or Linux. The plot method for data frames will automatically make a set of bivariate plots for each pair of variables (i.e., just use the `plot( iris )` function on the data frame).  
         - *Plot the dataframe including only the numeric columns* (exclude the species name column). Do you notice anything about the scatterplots? Do they correspond in any way to the dip seen in the QQ plots of some of the variables?
-
         - *Do you think there might be species differences in the data?* Remake the scatterplots, but this time color code the species like so. Read about the cheat in the stub I provided:
-
-    <img width="700" src="./etc/iris1.png">
-        - *Customize your plot* with your own color palette. `colors()` will show you all the valid color names in R, choose some that you like. Similar to the cheat strategy, you just need to associate your color index vector with the species values (see readings for examples. Let me show you what I mean, if I put the species vector and color index vector side by side it might look like this:
+<img width="700" src="./etc/iris1.png">  
+        - *Customize your plot* with your own color palette. `colors()` will show you all the valid color names in R, choose some that you like. Similar to the cheat strategy, you just need to associate your color index vector with the species values (see readings for examples. Let me show you what I mean, if I put the species vector and color index vector side by side it might look like this, and my customized plot looks like:
 
 ```
     > cbind(iris$Species, icol)
@@ -67,11 +65,9 @@ Make all four plots. Which variables are most normally distributed? Notice which
       [2,] "1" "magenta"  
     ...
      [51,] "2" "turquoise"
-
-    - My customized plot looks like this:
-```
+```  
 <img width="700" src="./etc/iris2.png">
-    - Feel free to customize your plot symbols (optional) [PointsShow.pdf is here](./etc/PointsShow.pdf).
+    - Feel free to customize your plot symbols (optional) [PointsShow.pdf is here](etc/PointsShow.pdf).
 <img width="700" src="./etc/PointsShow.png">    
 
 3.  **Wrap a function around your working code** so you can reuse it. Use the `function()` function to make your fabulous code reusable. Then test it. Your function should accept a data vector, a species index vector, and return the plot above.
@@ -80,7 +76,7 @@ Make all four plots. Which variables are most normally distributed? Notice which
 
 5.  **Are these species really distinct? Letʻs plot a permutation**.
     Scramble(=permute) the species names keeping the data in place and replot the data using function `sample()`. The idea is if all of the flowers come from the same group or species, it shouldnʻt matter which species label they have. Normally for a permutation test you might compute the mean or some statistic of interest and compare the observed statistic vs. for the permutations, but weʻre just coding so weʻll do plots so we can see what is happening (you can certainly compare means  as well if you like! - in any case even when I do stats I often do exploratory plots.) What do you expect to see? Your points should not change position, just the colors should change after randomizing species. Your plot might look something like this:
-    <img width="700" src="./etc/irisrandom1.png">
+<img width="700" src="./etc/irisrandom1.png">
         \- Make sure it works, then plot to pdf. Are the colors correctly assigned to the permuted species?
         \- Write permuted dataset to .csv
         \- Permute species, plot to pdf, write to csv 10 times. Your fabulous `paint.iris()` makes this easier.
@@ -97,13 +93,13 @@ Make all four plots. Which variables are most normally distributed? Notice which
     plot(dd)                         # plot the density of all Petal.Length points
 ```
 <img width="700" src="./etc/irisdensity.png">    
-    - Very interesting bumps there. But do they correspond to the different species? Your task is to plot the densities for Petal.Length by species together on one plot to see:
-<img width="700" src="./etc/irisdensitysp.png">
-    - What do you think?
-    - When you code your plots, you will have some issues with the plot size and will have to set xlimits and ylimits. Follow the hints in the stub.
-    - Once you get everything working, **Write a function** accepts as input a vector of data (i.e., `iris$Petal.Length` for example), and a vector that has information to indicate groups (i.e., `iris$Species`), and does what is necessary  to produce a pdf of the three densities on a single plot as we just did above.
-    - Use your function to produce density plots for each of the variables in the original data.
-    - Generate these plots for each of the 10 randomized datasets you saved earlier. One file per simulation (come up with a naming scheme `density_sim1.pdf` or whatever makes sense to you).  
+    - Very interesting bumps there. But do they correspond to the different species? Your task is to plot the densities for Petal.Length by species together on one plot to see:  
+<img width="700" src="./etc/irisdensitysp.png"> 
+    - What do you think?  
+    - When you code your plots, you will have some issues with the plot size and will have to set xlimits and ylimits. Follow the hints in the stub.  
+    - Once you get everything working, **Write a function** accepts as input a vector of data (i.e., `iris$Petal.Length` for example), and a vector that has information to indicate groups (i.e., `iris$Species`), and does what is necessary  to produce a pdf of the three densities on a single plot as we just did above.  
+    - Use your function to produce density plots for each of the variables in the original data.  
+    - Generate these plots for each of the 10 randomized datasets you saved earlier. One file per simulation (come up with a naming scheme `density_sim1.pdf` or whatever makes sense to you).    
 
 ### Once you have a working function, itʻs so easy isnʻt it?!
 
