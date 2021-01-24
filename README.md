@@ -3,8 +3,8 @@
 ## <span style="color:blue">due by Wendesay at midnight</span>
 
 Submit:
-1\. Your script ending in `.R`
-2\. Your output files
+1\. Your script ending in `.R`  
+2\. Your output files  
 
 | Criteria           | Evaluation                                                                                             | Scoring |
 | ------------------ | ------------------------------------------------------------------------------------------------------ | ------- |
@@ -52,15 +52,15 @@ Work through the stub `iris_stub.R` and edit.
 
 Make all four plots. Which variables are most normally distributed? Notice which are deviating the most? Do you see that break in some of the variables? Do you think that might be associated with differences among species?
 
-2.  **Explore scatterplots**. Make an new plot window using `quartz()` for Mac or `x11()` for PC or Linux. The plot method for data frames will automatically make a set of bivariate plots for each pair of variables (i.e., just use the `plot( iris )` function on the data frame).
-        \- _Plot the dataframe including only the numeric columns_ (exclude the species name column). Do you notice anything about the scatterplots? Do they correspond in any way to the dip seen in the QQ plots of some of the variables?
+2.  **Explore scatterplots**. Make an new plot window using `quartz()` for Mac or `x11()` for PC or Linux. The plot method for data frames will automatically make a set of bivariate plots for each pair of variables (i.e., just use the `plot( iris )` function on the data frame).  
+        - _Plot the dataframe including only the numeric columns_ (exclude the species name column). Do you notice anything about the scatterplots? Do they correspond in any way to the dip seen in the QQ plots of some of the variables?
 
         - *Do you think there might be species differences in the data?* Remake the scatterplots, but this time color code the species like so. Read about the cheat in the stub I provided:
 
     <img width="700" src="./etc/iris1.png">
         - *Customize your plot* with your own color palette. `colors()` will show you all the valid color names in R, choose some that you like. Similar to the cheat strategy, you just need to associate your color index vector with the species values (see readings for examples. Let me show you what I mean, if I put the species vector and color index vector side by side it might look like this:
 
-
+```
     > cbind(iris$Species, icol)
                icol       
       [1,] "1" "magenta"  
@@ -69,7 +69,7 @@ Make all four plots. Which variables are most normally distributed? Notice which
      [51,] "2" "turquoise"
 
     - My customized plot looks like this:
-
+```
 <img width="700" src="./etc/iris2.png">
     - Feel free to customize your plot symbols (optional) [PointsShow.pdf is here](./etc/PointsShow.pdf).
 <img width="700" src="./etc/PointsShow.png">    
@@ -91,11 +91,11 @@ Make all four plots. Which variables are most normally distributed? Notice which
 
     -   The density plot for Petal.Length all three species together looks like this:
 
-
+```
     density(iris$Petal.Length)       # print method shows some basic info
     dd <- density(iris$Petal.Length) # save density output
     plot(dd)                         # plot the density of all Petal.Length points
-
+```
 <img width="700" src="./etc/irisdensity.png">    
     - Very interesting bumps there. But do they correspond to the different species? Your task is to plot the densities for Petal.Length by species together on one plot to see:
 <img width="700" src="./etc/irisdensitysp.png">
@@ -117,9 +117,9 @@ CONGRATULATIONS! You just finished your second homework assignment.
 
 2.  As you go along start pushing your work up to your GitHub repo. Push early and push often! When you're done, submit it:
 
-
+```
     git add -A
     git commit -m "Final Submission"
     git push origin main
-
+```
 If you want me to check before the due date, generate an issue on the website for your repository but be sure to tag me @mbutler808 so I get a notification.
