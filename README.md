@@ -1,6 +1,6 @@
 # hw2-objects
 
-## <span style="color:blue">due by Wednesday at midnight</span>
+## <span style="color:blue">due by Wednesay at midnight</span>
 
 Submit:  
 1\. Your script ending in `.R`  
