@@ -53,10 +53,11 @@ Work through the stub `iris_stub.R` and edit.
 Make all four plots. Which variables are most normally distributed? Notice which are deviating the most? Do you see that break in some of the variables? Do you think that might be associated with differences among species?
 
 2.  **Explore scatterplots**. Make an new plot window using `quartz()` for Mac or `x11()` for PC or Linux. The plot method for data frames will automatically make a set of bivariate plots for each pair of variables (i.e., just use the `plot( iris )` function on the data frame).  
-        - *Plot the dataframe including only the numeric columns* (exclude the species name column). Do you notice anything about the scatterplots? Do they correspond in any way to the dip seen in the QQ plots of some of the variables?
-        - *Do you think there might be species differences in the data?* Remake the scatterplots, but this time color code the species like so. Read about the cheat in the stub I provided:
-<img width="700" src="./etc/iris1.png">  
-        - *Customize your plot* with your own color palette. `colors()` will show you all the valid color names in R, choose some that you like. Similar to the cheat strategy, you just need to associate your color index vector with the species values (see readings for examples. Let me show you what I mean, if I put the species vector and color index vector side by side it might look like this, and my customized plot looks like:
+  - *Plot the dataframe including only the numeric columns* (exclude the species name column). Do you notice anything about the scatterplots? Do they correspond in any way to the dip seen in the QQ plots of some of the variables?
+  - *Do you think there might be species differences in the data?* Remake the scatterplots, but this time color code the species like so. Read about the cheat in the stub I provided:
+<img width="700" src="./etc/iris1.png">    
+
+  - *Customize your plot* with your own color palette. `colors()` will show you all the valid color names in R, choose some that you like. Similar to the cheat strategy, you just need to associate your color index vector with the species values (see readings for examples. Let me show you what I mean, if I put the species vector and color index vector side by side it might look like this, and my customized plot looks like:
 
 ```
     > cbind(iris$Species, icol)
@@ -67,7 +68,7 @@ Make all four plots. Which variables are most normally distributed? Notice which
      [51,] "2" "turquoise"
 ```  
 <img width="700" src="./etc/iris2.png">
-    - Feel free to customize your plot symbols (optional) [PointsShow.pdf is here](etc/PointsShow.pdf).
+  - Feel free to customize your plot symbols (optional) [PointsShow.pdf is here](etc/PointsShow.pdf).
 <img width="700" src="./etc/PointsShow.png">    
 
 3.  **Wrap a function around your working code** so you can reuse it. Use the `function()` function to make your fabulous code reusable. Then test it. Your function should accept a data vector, a species index vector, and return the plot above.
