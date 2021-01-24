@@ -2,7 +2,7 @@
 
 ## <span style="color:blue">due by Wendesay at midnight</span>
 
-Submit:
+Submit:  
 1\. Your script ending in `.R`  
 2\. Your output files  
 
@@ -46,14 +46,14 @@ Work through the stub `iris_stub.R` and edit.
 
 1.  **QQ plots** Set the plot environment to make four plots on one page and make the four qqnorm plots (one for each variable), and they will fill the page by row first. Let’s also add a title to each panel so we know what’s what. Like this:
 
-
+```
     par(mfrow=c(2,2))
     qqnorm( iris$Petal.Width, main="Petal Width")
-
+```
 Make all four plots. Which variables are most normally distributed? Notice which are deviating the most? Do you see that break in some of the variables? Do you think that might be associated with differences among species?
 
 2.  **Explore scatterplots**. Make an new plot window using `quartz()` for Mac or `x11()` for PC or Linux. The plot method for data frames will automatically make a set of bivariate plots for each pair of variables (i.e., just use the `plot( iris )` function on the data frame).  
-        - _Plot the dataframe including only the numeric columns_ (exclude the species name column). Do you notice anything about the scatterplots? Do they correspond in any way to the dip seen in the QQ plots of some of the variables?
+        - *Plot the dataframe including only the numeric columns* (exclude the species name column). Do you notice anything about the scatterplots? Do they correspond in any way to the dip seen in the QQ plots of some of the variables?
 
         - *Do you think there might be species differences in the data?* Remake the scatterplots, but this time color code the species like so. Read about the cheat in the stub I provided:
 
